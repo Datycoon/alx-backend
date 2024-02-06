@@ -24,7 +24,7 @@ def get_locale() -> str:
     """Retrieves the locale for a web page.
     """
     if 'locale' in request.args:
-        if request.args.get['locale'] in app.config["LANGUAGES"]:
+        if request.args['locale'] in app.config["LANGUAGES"]:
             return request.args['locale']
     return request.accept_languages.best_match(app.config["LANGUAGES"])
 
