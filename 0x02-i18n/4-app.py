@@ -27,10 +27,11 @@ def get_locale():
 
 
 @app.route('/')
-def index():
+def get_index():
     """ Home page """
     return render_template('4-index.html')
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0', port=5000)
+
